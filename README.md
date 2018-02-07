@@ -5,7 +5,7 @@
 [![Coverage Status][5]][6]
 [![Dependency Status][7]][8]
 
-`immutable-array.every` provides a function that returns the concatenation of an immutable array with an item.
+`immutable-array.every` provides a function that returns true if predicate returns `true` for all items of immutable array and `false` if not.
 
 ## Install
 
@@ -17,17 +17,17 @@ $ npm install immutable-array.every --save
 ``` javascript
 const ImmutableArray = {
     of: require('immutable-array.of'),
-    push: require('immutable-array.every')
+    every: require('immutable-array.every')
 }
 
-const a = ImmutableArray.of([1, 2, 3, 4, 5]) // {array: [1, 2, 3, 4, 5], length: 5}
-const b = ImmutableArray.push(6, a) // {array: [1, 2, 3, 4, 5, 6], length: 6}
-a // {array: [1, 2, 3, 4, 5, 6], length: 5}
+const array = ImmutableArray.of([1, 2, 3, 4, 5]) // {array: [1, 2, 3, 4, 5], length: 5}
+ImmutableArray.every(e => e <= 3, array) // false
+ImmutableArray.every(e => e >= 1, array) // true
 ```
 
 ## Other related libraries
 - [immutable-array.of]()
-- [immutable-array.every]()
+- [immutable-array.push]()
 - [immutable-array.reduce]()
 - [immutable-array.findIndexFrom]()
 

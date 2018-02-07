@@ -1,6 +1,6 @@
 {
   "name": "immutable-array.every",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "given an immutable array and item it returns a new immutable array that represents the concatenation of immutable array and the item",
   "main": "index.js",
   "scripts": {
